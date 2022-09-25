@@ -15,8 +15,9 @@ async def users_crud():
     users_collection = db.users_collection
 
     user =  {
-        "email": "lu_domagalu@gmail.com",
-        "password": "213sd312re3",
+        "name": "Luiza da Silva",
+        "email": "lu2_domagalu@gmail.com",
+        "password": "123sd312re3",
         "is_active": True,
         "is_admin": False
     }
@@ -43,7 +44,7 @@ async def users_crud():
         )
 
         user_data = {
-            "password": 'new_password1234'
+            "password": 'password1234'
         }
 
         is_updated, numbers_updated = await update_user(
@@ -78,3 +79,4 @@ async def users_crud():
         print(users)
 
     await disconnect_db()
+        

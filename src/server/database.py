@@ -1,7 +1,5 @@
 from os import environ
-
 from motor.motor_asyncio import AsyncIOMotorClient
-
 
 class DataBase:
     client: AsyncIOMotorClient = None
@@ -23,6 +21,7 @@ async def connect_db():
         tls=True,
         tlsAllowInvalidCertificates=True
     )
+    # db.client = pymongo.MongoClient("mongodb+srv://rafawessling:art159357@luizacode.aclilkz.mongodb.net/?retryWrites=true&w=majority")
     db.users_collection = db.client.shopping_cart.users
     db.address_collection = db.client.shopping_cart.address
     db.product_collection = db.client.shopping_cart.products

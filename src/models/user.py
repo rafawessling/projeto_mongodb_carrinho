@@ -1,4 +1,3 @@
-
 async def create_user(users_collection, user):
     try:
         user = await users_collection.insert_one(user)
